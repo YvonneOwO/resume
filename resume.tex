@@ -1,0 +1,87 @@
+\documentclass[10pt,letterpaper]{article}
+
+% ---------- Packages ----------
+\usepackage[
+    top=0.34in,
+    bottom=0.34in,
+    left=0.45in,
+    right=0.45in
+]{geometry}
+
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% ---------- General ----------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+
+\urlstyle{same}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+
+% ---------- Section Formatting ----------
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0em}
+  {}
+  [\titlerule]
+
+\titlespacing{\section}{0pt}{7pt}{3pt}
+
+% ---------- Resume Commands ----------
+
+\newcommand{\resumeItem}[1]{
+    \item \small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \vspace{1pt}
+    \begin{tabularx}{\textwidth}{X r}
+        \textbf{#1} & \textbf{#2} \\
+        \textit{\small #3} & \textit{\small #4}
+    \end{tabularx}
+    \vspace{-3pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \begin{tabularx}{\textwidth}{X r}
+        \textbf{#1} & \textbf{#2}
+    \end{tabularx}
+    \vspace{-9pt}
+}
+
+\newenvironment{resumeItemList}{
+    \begin{itemize}[
+        leftmargin=0.18in,
+        itemsep=0pt,
+        topsep=0pt,
+        parsep=0pt,
+        partopsep=0pt
+    ]
+}{
+    \end{itemize}
+}
+
+% ---------- Document ----------
+\begin{document}
+
+\input{sections/header}
+\input{sections/summary}
+\input{sections/education}
+\input{sections/skills}
+\input{sections/experience}
+\input{sections/projects}
+
+\end{document}
